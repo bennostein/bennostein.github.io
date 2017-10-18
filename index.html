@@ -1,1 +1,78 @@
-Hello World
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>Benno Stein</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="bg"></div>
+
+    <div class="container-fluid" id="body-container">
+      <div class="row-fluid">
+	<div class="col-md-5"><!--col-md-offset-1">-->
+	  <img class="img-responsive" src="assets/headshot.png" id="headshot">
+	</div>
+	<div class="col-md-7">
+	  <h2 class="page-header">Benno Stein</h2>
+	  <p class="lead page-header" style="margin-top:0px">
+	    benno.stein@colorado.edu<br>
+	    <a href="http://www.colorado.edu/cs/about/directions">ECCS 121</a>
+	  </p>
+	  <h4>PhD Student, University of Colorado at Boulder</h4>
+	  <!--	  <h4><a href="http://plv.colorado.edu">Programming Languages and Verification Group</a></h4>-->
+	  <h4><a href="CV.pdf">Curriculum Vitae</a> | <a href="https://github.com/bennostein">Github</a> | <a href="https://www.linkedin.com/in/bennostein/">Linkedin</a> </h4>
+
+	  
+	</div>
+      </div>
+<!--      <div class="row-fluid" id ="divider"><div class="col-xs-12 page-header"></div></div>-->
+      <div class="row-fluid" id="body">
+	<div class="col-md-12">
+	  <h2 class="page-header text-left">About Me</h2>
+	  <p style="text-indent:5%">
+	    I am a PhD student in the Department of Computer Science at the University of Colorado, Boulder, where I started in Fall 2015 and received an MS in Fall 2017.  I am a member of the Programming Languages and Verification Group (<a href="http://plv.colorado.edu">CUPLV</a>), advised by Professor <a  href="http://cs.colorado.edu/~bec">Evan Chang</a>.  Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.
+	  </p>
+	  <h2 class="page-header text-left">Research Interests</h2>
+	  <p style="text-indent:5%">
+	    I am interested in building static analysis tools and formalisms that are able to handle the complexities of modern, feature-rich dynamic languages.  My current research aims to improve precision and efficiency of JavaScript analysis by combining a standard forwards abstract interpretation with a goal-directed backwards symbolic execution, refuting spurious data-flow on-demand at critical points during the forwards analysis.
+	  </p>
+	  
+	  <h2 class="page-header text-left">Recent News</h2>
+
+	  <div class="row-fluid">
+
+	    <h4 id="news-header"><span style="font-weight:bold;">Program Analysis Internship @ Uber</span> Palo Alto, CA, Summer 2017</h4>
+	    <p id="news-item">
+	      Built a type analysis to statically detect multithreading bugs in functional-reactive Android applications.  I worked under Manu Sridharan in the static analysis group.
+	    </p>
+	    
+	    <h4 id="news-header"><span style="font-weight:bold;">Oregon Programming Languages Summer School</span> Eugene, OR, June 2016</h4>
+	    <p id="news-item">
+	      Attended <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/">OPLSS 2016</a>.  I saw a wide range of talks from invited lecturers and other students, gave a talk on my own research, and got to know a <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/_images/OPLSS_2016.jpg">ton</a> of other PL researchers.
+	    </p>
+
+	    <h4 id="news-header"><span style="font-weight:bold;">PLDI Student Research Competition</span> Santa Barbara, CA, June 2016</h4>
+	    <p id="news-item">
+	      Won 2nd place for my <a href="pldi_src_poster.pdf">poster</a> and talk on "Goal-Directed Backwards Static Analysis for JavaScript".  <a href="pldi_src_abstract.pdf">abstract</a>
+	    </p>
+	    
+	    <h4 id="news-header"><span style="font-weight:bold;">DARPA MUSE Demo Meeting Hackathon</span> Washington D.C., February 2016</h4>
+	    <p id="news-item">
+	      Assisted the <a href="http://plv.colorado.edu">CUPLV</a> <a href="http://plv.colorado.edu/projects/MUSE/index.html">MUSE</a> team with their hackathon by building a backwards, goal-directed Android analysis, looking for misuses of common Android encryption libraries.
+	    </p>
+
+	    <h4 id="news-header"><span style="font-weight:bold;">POPL (and PLMW)</span> St. Petersburg, FL, January 2016</h4>
+	    <p id="news-item">
+	      Attended POPL '16 and the co-located Programming Languages Mentoring Workshop on a Research Community Development grant from CU.
+	    </p>
+
+	  </div>
+	  <br><br><br>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

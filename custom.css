@@ -1,0 +1,38 @@
+#bg {
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    z-index: -9999;
+    height: 5000px;
+    width: 3000px;
+    background: url(assets/bg.png) repeat 0 0;
+}
+#body-container {
+    background: rgba(225,225,225,0.9);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#headshot {
+    border: 2px solid black;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+a:visited {
+    color: #551A8B
+}
+
+#news-header {
+    /*border-bottom: 1px solid black;*/
+    text-decoration: underline;
+}
+
+#news-item {
+    margin-left: 5%;
+    margin-right: 20%;
+}
