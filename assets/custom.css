@@ -7,7 +7,7 @@
     z-index: -9999;
     height: 5000px;
     width: 3000px;
-    background: url(bg.png) repeat 0 0;
+    background: rgba(40,40,60,1);
 }
 #body-container {
     background: rgba(225,225,225,0.9);
@@ -16,7 +16,13 @@
 }
 
 #headshot {
-    border: 2px solid black;
+    border:2px solid black;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:5px;
+    margin-right:5px;
+}
+#logo {
     margin-top:20px;
     margin-bottom:20px;
     margin-left:5px;
