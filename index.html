@@ -6,35 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/lit.css" rel="stylesheet">
     <link href="assets/util.css" rel="stylesheet">
-    <link href="assets/custom_lit.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
   </head>
   <body class="c">
 
-    <!--<div class="row card" id="navbar" style="text-align:center">
-      <div class="3 col"><a href="#about">About</a></div>
-      <div class="3 col"><a href="#news">News</a></div>
-      <div class="3 col"><a href="#pubs">Publications</a></div>
-      <div class="3 col"><a href="#contact">Contact</a></div>		  
-    </div>!-->
-    
     <div class="row">
       
-      <div class="4 col">
+      <div class="4 col" style="text-align: center">
 	
 	<h1>Benno Stein</h1>
 
-	<img class="w-100" src="assets/headshot.png">
+	<img class="" src="assets/headshot.png">
 		
 	<hr>
-	<h4>PhD Student, University of Colorado at Boulder</h4>
+	<h4>PhD Student</h4><h5> University of Colorado Boulder</h5>
 	<p>
 	  <a href="mailto:Benno Stein">firstname dot lastname at colorado dot edu</a>
 	  <br>
 	  <a href="http://www.colorado.edu/cs/about/directions">ECCS 121</a>
 	</p>
 	<hr>
-	
 	<div class="pv1 row">
 	  <div class="m1 col"><a class="p1 btn" href="CV.pdf">CV</a></div>
 	  <div class="m1 col"><a class="p1 btn" href="#pubs">Publications</a></div>
@@ -46,23 +37,23 @@
       
       <div class="7 col">
 	
-	<div class="row">
+	<div class="row" id="about">
 	  <h3>About Me</h3><hr>
 	  I am a PhD student in the Department of Computer Science at the University of Colorado Boulder, where I started in Fall 2015 and received an MS in Fall 2017.  I am a member of the Programming Languages and Verification (<a href="https://plv.colorado.edu">CUPLV</a>), advised by Professor <a  href="http://cs.colorado.edu/~bec">Evan Chang</a>.  Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.
 	</div>
 	
-	<div class="row">
+	<div class="row" id="research">
 	  <h3>Research Interests</h3><hr>
 	  I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development.
 	  Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>, using graph-based techniques to efficiently and soundly deliver analysis results when and where they're needed.
 	  Prior to that, I worked on improving the precision and efficiency of JavaScript analysis, combining a standard forwards abstract interpreter with a goal-directed <b>backwards symbolic execution</b> to refute spurious dataflow on-demand at critical points during the forwards analysis.
 
-	  I've also worked on a range of other program analysis topics in both academia and industry including refinement type system, bounded symbolic execution, and software engineering applications of program analysis.
+	  I've also worked on a range of other program analysis topics in both academia and industry including refinement type systems, bounded symbolic execution, and software engineering applications of program analysis.
 	</div>
       </div>
       
     </div>
-    <div  class="row card">
+    <div  class="row" id="news">
       <h2>Recent News</h2><hr>
       
       <div class="row">
@@ -141,7 +132,7 @@
 	<div class="col">
 	  <h4><b> Student Volunteer @ POPL '18 </b> </h4>
 	</div>
-	<div class="col">
+	<div class="col" style="text-align:right">
 	  <h5><i>Los Angeles, CA, January 2018</i></h5>
 	</div>
       </div>
@@ -172,7 +163,7 @@
 	<div class="col">
 	  <h4><b> Oregon Programming Languages Summer School </b> </h4>
 	</div>
-	<div class="col">
+	<div class="col" style="text-align:right">
 	  <h5><i>Eugene, OR, June 2016</i></h5>
 	</div>
       </div>
@@ -227,7 +218,7 @@
       </div>
             
     </div>
-    <div  class="row card" id="pubs">
+    <div  class="row" id="pubs">
       <h2>Publications</h2><hr>
 
       <div class="row" style="margin-bottom:0px">
