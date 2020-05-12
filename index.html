@@ -4,112 +4,273 @@
     <meta charset="utf-8">
     <title>Benno Stein</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/custom.css" rel="stylesheet">
+    <link href="assets/lit.css" rel="stylesheet">
+    <link href="assets/util.css" rel="stylesheet">
+    <link href="assets/custom_lit.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
   </head>
-  <body>
-    <div id="bg"></div>
+  <body class="c">
 
-    <div class="container-fluid" id="body-container">
-      <div class="row-fluid">
-	<div class="col-md-5"><!--col-md-offset-1">-->
-	  <img class="img-responsive" src="assets/headshot.png" id="headshot">
+    <!--<div class="row card" id="navbar" style="text-align:center">
+      <div class="3 col"><a href="#about">About</a></div>
+      <div class="3 col"><a href="#news">News</a></div>
+      <div class="3 col"><a href="#pubs">Publications</a></div>
+      <div class="3 col"><a href="#contact">Contact</a></div>		  
+    </div>!-->
+    
+    <div class="row">
+      
+      <div class="4 col">
+	
+	<h1>Benno Stein</h1>
+
+	<img class="w-100" src="assets/headshot.png">
+		
+	<hr>
+	<h4>PhD Student, University of Colorado at Boulder</h4>
+	<p>
+	  <a href="mailto:Benno Stein">firstname dot lastname at colorado dot edu</a>
+	  <br>
+	  <a href="http://www.colorado.edu/cs/about/directions">ECCS 121</a>
+	</p>
+	<hr>
+	
+	<div class="pv1 row">
+	  <div class="m1 col"><a class="p1 btn" href="CV.pdf">CV</a></div>
+	  <div class="m1 col"><a class="p1 btn" href="#pubs">Publications</a></div>
+	  <div class="m1 col"><a class="p1 btn" href="https://github.com/bennostein">Github</a></div>
+	  <div class="m1 col"><a class="p1 btn" href="https://www.linkedin.com/in/bennostein">LinkedIn</a></div>
 	</div>
-	<div class="col-md-7">
-	  <h2 class="page-header">Benno Stein</h2>
-	  <p class="lead page-header" style="margin-top:0px">
-	    benno.stein@colorado.edu<br>
-	    <a href="http://www.colorado.edu/cs/about/directions">ECCS 121</a>
-	  </p>
-	  <h4>PhD Student, University of Colorado at Boulder</h4>
-	  <h4> <a href="#pubs">Publications</a> | <a href="CV.pdf">Curriculum Vitae</a> | <a href="https://github.com/bennostein">Github</a> | <a href="https://www.linkedin.com/in/bennostein/">Linkedin</a> </h4>
+	
+      </div>
+      
+      <div class="7 col">
+	
+	<div class="row">
+	  <h3>About Me</h3><hr>
+	  I am a PhD student in the Department of Computer Science at the University of Colorado Boulder, where I started in Fall 2015 and received an MS in Fall 2017.  I am a member of the Programming Languages and Verification (<a href="https://plv.colorado.edu">CUPLV</a>), advised by Professor <a  href="http://cs.colorado.edu/~bec">Evan Chang</a>.  Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.
+	</div>
+	
+	<div class="row">
+	  <h3>Research Interests</h3><hr>
+	  I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development.
+	  Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>, using graph-based techniques to efficiently and soundly deliver analysis results when and where they're needed.
+	  Prior to that, I worked on improving the precision and efficiency of JavaScript analysis, combining a standard forwards abstract interpreter with a goal-directed <b>backwards symbolic execution</b> to refute spurious dataflow on-demand at critical points during the forwards analysis.
 
+	  I've also worked on a range of other program analysis topics in both academia and industry including refinement type system, bounded symbolic execution, and software engineering applications of program analysis.
+	</div>
+      </div>
+      
+    </div>
+    <div  class="row card">
+      <h2>Recent News</h2><hr>
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Paper @ OOPSLA '19 </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Athens, Greece, October 2019</i></h5>
+	</div>
+	<div class="col" style="text-align:right">
+	  <a href="oopsla19.pdf" class="p1 btn b-white">paper</a>
+	  <a href="oopsla19-poster.pdf" class="p1 btn b-white">poster</a>
+	  <a href="oopsla19-slides.pdf" class="p1 btn b-white">slides</a>
+	</div>
+      </div>
+      <div class="row">
+	We presented our paper <i>Static Analysis with Demand-Driven Value Refinement</i> at the ACM/SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+
+      <div class="row">
+	<div class="col">
+	  <h4><b> Facebook Internship </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>London, UK, Fall 2019</i></h5>
+	</div>
+	<div class="col" style="text-align:right">
+	  <a href="https://github.com/facebook/infer/tree/master/sledge" class="p1 btn b-white">open-source</a>
+	</div>
+      </div>
+      <div class="row">
+	I worked with Josh Berdine and the Infer team on <i>Sledge</i>: a separation logic-based symbolic executor for LLVM.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Paper @ ASE '18 </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Montpellier, France, September 2018</i></h5>
+	</div>
+	<div class="col" style="text-align:right">
+	  <a href="ase18.pdf" class="p1 btn b-white">paper</a>
+	  <a href="ase18_slides.pdf" class="p1 btn b-white">slides</a>
 	  
 	</div>
       </div>
-      <div class="row-fluid" id="body">
-	<div class="col-md-12">
-	  <h2 class="page-header text-left">About Me</h2>
-	  <p style="text-indent:5%">
-	    I am a PhD student in the Department of Computer Science at the University of Colorado, Boulder, where I started in Fall 2015 and received an MS in Fall 2017.  I am a member of the Programming Languages and Verification Group (<a href="http://plv.colorado.edu">CUPLV</a>), advised by Professor <a  href="http://cs.colorado.edu/~bec">Evan Chang</a>.  Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.
-	  </p>
-	  <h2 class="page-header text-left">Research Interests</h2>
-	  <p style="text-indent:5%">
-	    I am interested in building static analysis tools and formalisms that are able to handle the complexities of modern, feature-rich dynamic languages.  My current research aims to improve precision and efficiency of JavaScript analysis by combining a standard forwards abstract interpretation with a goal-directed backwards symbolic execution, refuting spurious data-flow on-demand at critical points during the forwards analysis.  I've also worked on a range of other program analysis topics in research and industry including refinement type systems, incremental program analysis, and software engineering applications of program analysis.
-	  </p>
-	  
-	  <h2 class="page-header text-left">Recent News</h2>
+      <div class="row">
+	I presented our paper <i>Safe Stream-Based Programming with Refinement Types</i> at the 33rd IEEE/ACM International Conference on Automated Software Engineering.
+      </div>
 
-	  <div class="row-fluid">
-	    
-	    <h4 id="news-header"><span style="font-weight:bold;">Paper @ OOPSLA '19</span> Athens, Greece, October 2019</h4>
-	    <p id="news-item">
-	      We presented our paper <a href="oopsla19.pdf">Static Analysis with Demand-Driven Value Refinement</a> at the ACM/SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications. (<a href="oopsla19-poster.pdf">poster</a>, <a href="oopsla19-slides.pdf">slides</a>)
-	    </p>
-
-	    <h4 id="news-header"><span style="font-weight:bold;">Program Analysis Internship @ Facebook</span> London, UK, Fall 2019</h4>
-	    <p id="news-item">
-	      Working with Josh Berdine and the Infer team on Sledge: a separation logic-based symbolic execution tool for LLVM. (<a href="https://github.com/facebook/infer">open source</a>)
-	    </p>
-	    
-	    <h4 id="news-header"><span style="font-weight:bold;">Paper @ ASE '18</span> Montpellier, France, September 2018</h4>
-	    <p id="news-item">
-	      Presented our paper <a href="ase18.pdf">Safe Stream-Based Programming with Refinement Types</a> at the 33rd IEEE/ACM International Conference on Automated Software Engineering. (<a href="ase18_slides.pdf">slides</a>)
-	    </p>
-	    
-	    <h4 id="news-header"><span style="font-weight:bold;">Program Analysis Internship @ Google</span> Sunnyvale, CA, Summer 2018</h4>
-	    <p id="news-item">
-	      Implemented some improvements (type inference, access-path tracking, type annotation/bound support) for the Error Prone nullness analysis.  (<a href="https://github.com/google/error-prone">open source</a>)
-	    </p>
-
-	    <h4 id="news-header"><span style="font-weight:bold;">Program Analysis Internship @ Uber</span> Palo Alto, CA, Summer 2017</h4>
-	    <p id="news-item">
-	      Built a type analysis to statically detect multithreading bugs in functional-reactive Android applications.  I worked under Manu Sridharan in the static analysis group.  (<a href="https://github.com/uber-research/RxThreadEffectChecker">open source</a>)
-	    </p>
-	    
-	    <h4 id="news-header"><span style="font-weight:bold;">Oregon Programming Languages Summer School</span> Eugene, OR, June 2016</h4>
-	    <p id="news-item">
-	      Attended <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/">OPLSS 2016</a>.  I saw a wide range of talks from invited lecturers and other students, gave a talk on my own research, and got to know a <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/_images/OPLSS_2016.jpg">ton</a> of other PL researchers.
-	    </p>
-
-	    <h4 id="news-header"><span style="font-weight:bold;">PLDI Student Research Competition</span> Santa Barbara, CA, June 2016</h4>
-	    <p id="news-item">
-	      Won 2nd place for my <a href="pldi_src_poster.pdf">poster</a> and talk on "Goal-Directed Backwards Static Analysis for JavaScript".  <a href="pldi_src_abstract.pdf">abstract</a>
-	    </p>
-	    
-	    <h4 id="news-header"><span style="font-weight:bold;">DARPA MUSE Demo Meeting Hackathon</span> Washington D.C., February 2016</h4>
-	    <p id="news-item">
-	      Assisted the <a href="http://plv.colorado.edu">CUPLV</a> <a href="http://plv.colorado.edu/projects/MUSE/index.html">MUSE</a> team with their hackathon by building a backwards, goal-directed Android analysis, looking for misuses of common Android encryption libraries.
-	    </p>
-
-	    <h4 id="news-header"><span style="font-weight:bold;">POPL (and PLMW)</span> St. Petersburg, FL, January 2016</h4>
-	    <p id="news-item">
-	      Attended POPL '16 and the co-located Programming Languages Mentoring Workshop on a Research Community Development grant from CU.
-	    </p>
-
-	  </div>
-	  
-	  <h2 id="pubs" class="page-header text-left">Publications</h2>
-	    <h4 id="news-header"><span>Static Analysis with Demand-Driven Value Refinement</h4>
-	    <p id="news-item">
-	      <b>Benno Stein</b>, Benjamin Barslev Nielsen, Bor-Yuh Evan Chang, Anders Møller.
-	      <br>
-	      <i>ACM/SIGPLAN Conference on Object-Oriented Programs, Systems, Languages, and Applications <b>(OOPSLA '19)</b>.</i>
-	      <br>
-	       <a href="oopsla19.pdf">pdf</a> | <a href="oopsla19-slides.pdf">slides</a> (courtesy of Benjamin Barslev Nielsen) | <a href="oopsla19-poster.pdf">poster</a>
-	    </p>
-	    <h4 id="news-header"><span>Safe Stream-Based Programming with Refinement Types</h4>
-	    <p id="news-item">
-	      <b>Benno Stein</b>, Lazaro Clapp, Manu Sridharan, Bor-Yuh Evan Chang.
-	      <br>
-	      <i>33rd IEEE/ACM International Conference on Automated Software Engineering <b>(ASE '18)</b>.</i>
-	      <br>
-	       <a href="ase18.pdf">pdf</a> | <a href="ase18_slides.pdf">slides</a>
-	    </p>
-
-	  <br><br><br>
+      <hr style="border:dashed #eee 2px">
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Google Internship </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Sunnyvale, CA, Summer 2018</i></h5>
+	</div>
+	<div class="col" style="text-align:right">
+	  <a href="https://github.com/google/error-prone" class="p1 btn b-white">open-source</a>
 	</div>
       </div>
+      <div class="row">
+	I worked with Kevin Bierhoff and the Java language platform team to implement some improvements (type inference, access-path tracking, type annotation and bound support) for the <a href="https://github.com/google/error-prone">Error Prone</a> Java nullness analysis.
+      </div>
+      
+      <hr style="border:dashed #eee 2px">
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Student Volunteer @ POPL '18 </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Los Angeles, CA, January 2018</i></h5>
+	</div>
+      </div>
+      <div class="row">
+	Attended and assisted with logistics at POPL and several co-located workshops.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Uber Internship </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Palo Alto, CA, Summer 2017</i></h5>
+	</div>
+	<div class="col" style="text-align:right">
+	  <a href="https://github.com/google/uber-research/RxThreadEffectChecker" class="p1 btn b-white">open-source</a>
+	</div>
+      </div>
+      <div class="row">
+	I built a type analysis to statically detect multithreading bugs in <a href="http://reactivex.io/">functional-reactive</a> Android applications, working under Manu Sridharan in the static analysis group.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+      
+      <div class="row">
+	<div class="col">
+	  <h4><b> Oregon Programming Languages Summer School </b> </h4>
+	</div>
+	<div class="col">
+	  <h5><i>Eugene, OR, June 2016</i></h5>
+	</div>
+      </div>
+      <div class="row">
+	Attended <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/">OPLSS 2016</a>.  I saw a wide range of talks from invited lecturers and other students, gave a talk on my own research, and got to know a <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/_images/OPLSS_2016.jpg">ton</a> of other PL researchers.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+
+      <div class="row">
+	<div class="7 col">
+	  <h4><b> PLDI Student Research Competition </b> </h4>
+	</div>
+	<div class="3 col">
+	  <h5><i>Santa Barbara, CA, June 2016</i></h5>
+	</div>
+	<div class="2 col" style="text-align:right">
+	  <a href="pldi_src_poster.pdf" class="p1 btn b-white">poster</a>
+	  <a href="pldi_src_abstract.pdf" class="p1 btn b-white">abstract</a>	  
+	</div>
+      </div>
+      <div class="row">
+	Attended PLDI and won 2nd place in the SRC for my presentation on <i>Goal-Directed Backwards Static Analysis for JavaScript</i>.
+      </div>
+
+      <hr style="border:dashed #eee 2px">
+
+      <div class="row">
+	<div class="col">
+	  <h4><b> DARPA MUSE Demo Hackathon </b> </h4>
+	</div>
+	<div class="col" style="text-align:right">
+	  <h5><i>Washington D.C., February 2016</i></h5>
+	</div>
+      </div>
+      <div class="row">
+	Assisted the <a href="http://plv.colorado.edu">CUPLV</a> <a href="http://plv.colorado.edu/projects/MUSE/index.html">MUSE</a> team with their hackathon by building a backwards, goal-directed Android analysis, looking for misuses of common Android encryption libraries.
+      </div>
+      
+      <hr style="border:dashed #eee 2px">
+
+      <div class="row">
+	<div class="col">
+	  <h4><b> PLMW @ POPL </b> </h4>
+	</div>
+	<div class="col" style="text-align:right">
+	  <h5><i>St. Petersburg, FL, January 2016</i></h5>
+	</div>
+      </div>
+      <div class="row">
+	Attended POPL '16 and the co-located Programming Languages Mentoring Workshop, supported by a research community development grant from CU.
+      </div>
+            
+    </div>
+    <div  class="row card" id="pubs">
+      <h2>Publications</h2><hr>
+
+      <div class="row" style="margin-bottom:0px">
+	<div class="col">
+	  <h4>Static Analysis with Demand-Driven Value Refinement</h4>
+	</div>
+	<div class="2 col" style="text-align:right">
+	  <h5><i>OOPSLA '19</i></h5>
+	</div>
+      </div>
+      <div class="row" style="margin-top:0px">
+	<div class="8 col">
+	  <b>Benno Stein</b>, Benjamin Barslev Nielsen, Bor-Yuh Evan Chang, Anders Møller.
+	  <br>
+	  <i>ACM/SIGPLAN Conference on Object-Oriented Programs, Systems, Languages, and Applications (<b>OOPSLA '19</b>)</i><br>
+	  (Slides courtesy of Benjamin Barslev Nielsen)
+	</div>
+      	<div class="m1 col"><a class="btn" href="oopsla19.pdf">pdf</a></div>
+	<div class="m1 col"><a class="btn" href="oopsla19-slides">slides</a></div>
+	<div class="m1 col"><a class="btn" href="oopsla19-poster.pdf">poster</a></div>
+      </div>
+
+      <br><hr style="border:dashed #eee 2px">
+
+      <div class="row" style="margin-bottom: -1px">
+	<div class="col">
+	  <h4>Safe Stream-Based Programming with Refinement Types</h4>
+	</div>
+	<div class="2 col" style="text-align:right">
+	  <h5><i>ASE '18</i></h5>
+	</div>
+      </div>
+      <div class="row" style="margin-top: -1px">
+	<div class="8 col">
+	  <b>Benno Stein</b>, Lazaro Clapp, Manu Sridharan, Bor-Yuh Evan Chang.
+	  <br>
+	  <i>33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE '18</b>)</i>
+	</div>
+      	<div class="m1 col"><a class="btn" href="ase18.pdf">pdf</a></div>
+	<div class="m1 col"><a class="btn" href="ase18_slides.pdf">slides</a></div>
+      </div>
+      
     </div>
   </body>
 </html>
+
