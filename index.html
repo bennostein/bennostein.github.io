@@ -1,360 +1,424 @@
 <!DOCTYPE html>
+
 <html style="height: 100%;">
-  <head>
-    <meta charset="utf-8">
-    <title>Benno Stein</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/lit.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-  </head>
-  <script>
-    function toggle(elt_id, force_visible) {
-	var elt = document.getElementById(elt_id); var elt_toggler = document.getElementById(elt_id + '_toggler');
-	if (force_visible || elt.style.display === 'none') {
-	    elt.style.display = 'block'; elt_toggler.textContent = "[click to collapse]";
-	} else {
-	    elt.style.display = 'none'; elt_toggler.textContent = "[click to expand]";
-	}
+<head>
+  <meta charset="utf-8">
+
+  <title>Benno Stein</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/lit.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+function toggle(elt_id, force_visible) {
+        var elt = document.getElementById(elt_id); var elt_toggler = document.getElementById(elt_id + '_toggler');
+        if (force_visible || elt.style.display === 'none') {
+            elt.style.display = 'block'; elt_toggler.textContent = "[click to collapse]";
+        } else {
+            elt.style.display = 'none'; elt_toggler.textContent = "[click to expand]";
+        }
     }
   </script>
-  
-  <body class="c">
-    <div class="row">
-      <div class="4 col" style="text-align: center">
-	<h1>Benno Stein</h1>
-	<img class="b-green" src="assets/alt_headshot.png" style="max-width: 100%;  height: auto">
-	<hr>
-	<h4>PhD Candidate</h4><h5> University of Colorado Boulder</h5>
-	<p>
-	  <a href="mailto:Benno Stein">firstname dot lastname at colorado dot edu</a>
-	  <br>
-	  <a href="https://map.concept3d.com/?id=336#!w/40.00714,-105.2637,1;40.00668,-105.26376,1;1">ECCS 121</a>
-	</p>
-	<hr>
-	<div class="pv1 row">
-	  <div class="m1 col"><a class="p1 btn b-green" href="CV.pdf">CV</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="https://dblp.org/pid/69/4806-2.html">Publications</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="https://github.com/bennostein">Github</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="https://www.linkedin.com/in/bennostein">LinkedIn</a></div>
-	</div>
-      </div>
-      <div class="7 col">
-	<div class="row" id="about">
-	  <h3 class="mb0">About Me</h3><hr class="mt0">
-	  <p>I am a PhD candidate in the Department of Computer Science at the University of Colorado Boulder, where I started in Fall 2015 and received an MS in Fall 2017.  I am a member of the Programming Languages and Verification group (<a href="https://plv.colorado.edu">CUPLV</a>), advised by Professor <a  href="http://cs.colorado.edu/~bec">Evan Chang</a>.  Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.</p>
-	</div>
-	
-	<div class="row" id="research">
-	  <h3 class="mb0">Research Interests</h3><hr class="mt0">
-	  I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development.
-	  Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>, using graph-based techniques to efficiently and soundly deliver analysis results when and where they're needed.
-	  Prior to that, I worked on improving the precision and efficiency of JavaScript analysis, combining a standard forwards abstract interpreter with a goal-directed <b>backwards symbolic execution</b> to refute spurious dataflow on-demand at critical points during the forwards analysis.
+</head>
 
-	  I've also worked on a range of other program analysis topics in both academia and industry including refinement type systems, type inference, and bounded symbolic execution.
-	</div>
-      </div>
-    </div>
-
-    <div class="row" onclick="toggle('news')">
-      <span style="font:300 2em nunito;color:#49c484;cursor:pointer">Recent News</span>
-      <span id="news_toggler" style="font:300 1em nunito;color:#eee;cursor:pointer">[click to expand]</span>
+<body class="c">
+  <div class="row">
+    <div class="4 col" style="text-align: center">
+      <h1>Benno Stein</h1><img class="b-green" src="assets/alt_headshot.png" style="max-width: 100%; height: auto">
       <hr>
-    </div>
-    <div class="row" id="news" style="display:none">
-      <div class="row m0"></div>
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Paper @ PLDI '21 </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Virtual, June 2021</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Our paper <i>Demanded Abstract Interpretation</i> will be presented at the ACM/SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a class="p1 btn" href="pldi21.pdf">paper</a>
-	    <a class="p1 btn" href="pldi21-slides.pdf">slides</a>
-	  </div>
-	</div>
-      </div>
 
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Thesis Proposal </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Boulder, Colorado, February 2021</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    I proposed a dissertation centered around my recent work on <i>Interactive Abstract Interpretation</i>, in which I lift <i>arbitrary</i> abstract interpreters to incremental and demand-driven equivalents that are provably sound, terminating, and from-scratch consistent with the underlying interpreter.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="prop.pdf" class="p1 btn">proposal</a>
-	    <a href="prop.key" class="p1 btn">slides</a>
-	  </div>	
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Paper @ OOPSLA '19 </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Athens, Greece, October 2019</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    We presented our paper <i>Static Analysis with Demand-Driven Value Refinement</i> at the ACM/SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="oopsla19.pdf" class="p1 btn">paper</a>
-	    <a href="oopsla19-poster.pdf" class="p1 btn">poster</a>
-	    <a href="oopsla19-slides.pdf" class="p1 btn">slides</a>
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Facebook Internship </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>London, UK, Fall 2019</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    I worked with Josh Berdine and the Infer team on <i>Sledge</i>: a separation logic-based symbolic executor for LLVM.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="https://github.com/facebook/infer/tree/master/sledge" class="p1 btn" style="white-space:nowrap">open-source</a>
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Paper @ ASE '18 </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Montpellier, France, September 2018</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    I presented our paper <i>Safe Stream-Based Programming with Refinement Types</i> at the 33rd IEEE/ACM International Conference on Automated Software Engineering.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="ase18.pdf" class="p1 btn">paper</a>
-	    <a href="ase18_slides.pdf" class="p1 btn">slides</a>	  
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Google Internship </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Sunnyvale, CA, Summer 2018</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    I worked with Kevin Bierhoff and the Java language platform team to implement some improvements (type inference, access-path tracking, type annotation and bound support) for the <a href="https://github.com/google/error-prone">Error Prone</a> Java nullness analysis.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="https://github.com/google/error-prone" class="p1 btn" style="white-space:nowrap">open-source</a>
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">	
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Student Volunteer @ POPL '18 </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Los Angeles, CA, January 2018</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Attended and assisted with logistics at POPL and several co-located workshops.
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Uber Internship </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Palo Alto, CA, Summer 2017</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    I built a type analysis to statically detect multithreading bugs in <a href="http://reactivex.io/">functional-reactive</a> Android applications, working under Manu Sridharan in the static analysis group.
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <a href="https://github.com/google/uber-research/RxThreadEffectChecker" class="p1 btn" style="white-space:nowrap">open-source</a>
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> Oregon Programming Languages Summer School </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Eugene, OR, June 2016</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Attended <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/">OPLSS 2016</a>.  I saw a wide range of talks from invited lecturers and other students, gave a talk on my own research, and got to know a <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/_images/OPLSS_2016.jpg">ton</a> of other PL researchers.
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="6 col">
-	    <h4><b style="color:#49c484"> PLDI Student Research Competition </b> </h4>
-	  </div>
-	  <div class="4 col" style="text-align:right">
-	    <h5><i>Santa Barbara, CA, June 2016</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Attended PLDI and won 2nd place in the SRC for my presentation on <i>Goal-Directed Backwards Static Analysis for JavaScript</i>.
-	  </div>
-	  <div class="2 col" style="text-align:right">
-	    <a href="pldi_src_poster.pdf" class="p1 btn">poster</a>
-	    <a href="pldi_src_abstract.pdf" class="p1 btn">abstract</a>	  
-	  </div>
-	</div>
-      </div>
-      
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> DARPA MUSE Demo Hackathon </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>Washington D.C., February 2016</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Assisted the <a href="http://plv.colorado.edu">CUPLV</a> <a href="http://plv.colorado.edu/projects/MUSE/index.html">MUSE</a> team with their hackathon by building a backwards, goal-directed Android analysis, looking for misuses of common Android encryption libraries.
-	  </div>
-	</div>
-      </div>
+      <h4>PhD Candidate</h4>
 
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4><b style="color:#49c484"> PLMW @ POPL </b> </h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>St. Petersburg, FL, January 2016</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="col newsitem">
-	    Attended POPL '16 and the co-located Programming Languages Mentoring Workshop, supported by a research community development grant from CU.
-	  </div>
-	</div>
-      </div>
-    </div>
+      <h5>University of Colorado Boulder</h5>
 
-    <div class="row" onclick="toggle('pubs')">
-      <span style="font:300 2em nunito;color:#49c484;cursor:pointer">Publications</span>
-      <span id="pubs_toggler" style="font:300 1em nunito;color:#eee;cursor:pointer">[click to expand]</span>
+      <p><a href="mailto:Benno%20Stein">firstname dot lastname at colorado dot edu</a><br>
+      <a href="https://map.concept3d.com/?id=336#!w/40.00714,-105.2637,1;40.00668,-105.26376,1;1">ECCS 121</a></p>
       <hr>
+
+      <div class="pv1 row">
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="CV.pdf">CV</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="https://dblp.org/pid/69/4806-2.html">Publications</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="https://github.com/bennostein">Github</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="https://www.linkedin.com/in/bennostein">LinkedIn</a>
+        </div>
+      </div>
     </div>
-    <div class="row" id="pubs" style="display:none">
-      <div class="row"></div>
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4 style="color:#49c484">Demanded Abstract Interpretation</h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>PLDI '21</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="8 col newsitem">
-	    <b>Benno Stein</b>, Bor-Yuh Evan Chang, Manu Sridharan.
-	    <br>
-	    <i>ACM/SIGPLAN Conference on Programming Language Design and Implementation (<b>PLDI '21</b>)</i>
-	  </div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="pldi21.pdf">pdf</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="pldi21-slides.pdf">slides</a></div>
-	</div>
+
+    <div class="7 col">
+      <div class="row" id="about">
+        <h3 class="mb0">About Me</h3>
+        <hr class="mt0">
+
+        <p>I am a PhD candidate in the Department of Computer Science at the University of Colorado Boulder, where I started in Fall 2015 and received an MS in Fall 2017. I am a member of the Programming Languages and Verification group (<a href="https://plv.colorado.edu">CUPLV</a>), advised by Professor <a href="http://cs.colorado.edu/~bec">Evan Chang</a>. Previously, I was a student at <a href="http://www.williams.edu">Williams College</a>, in Williamstown, MA, where I graduated in June 2015 with a BA in Computer Science and Mathematics.</p>
       </div>
 
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom:-2em">
-	  <div class="col">
-	    <h4 style="color:#49c484">Static Analysis with Demand-Driven Value Refinement</h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	  <h5><i>OOPSLA '19</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="8 col newsitem">
-	    <b>Benno Stein</b>, Benjamin Barslev Nielsen, Bor-Yuh Evan Chang, Anders Møller.
-	    <br>
-	  <i>ACM/SIGPLAN Conference on Object-Oriented Programs, Systems, Languages, and Applications (<b>OOPSLA '19</b>)</i><br>
-	  (Slides courtesy of Benjamin Barslev Nielsen)
-	  </div>
-      	  <div class="m1 col"><a class="p1 btn b-green" href="oopsla19.pdf">pdf</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="oopsla19-slides.pdf">slides</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="oopsla19-poster.pdf">poster</a></div>
-	</div>
+      <div class="row" id="research">
+        <h3 class="mb0">Research Interests</h3>
+        <hr class="mt0">
+        I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development. Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>, using graph-based techniques to efficiently and soundly deliver analysis results when and where they're needed. Prior to that, I worked on improving the precision and efficiency of JavaScript analysis, combining a standard forwards abstract interpreter with a goal-directed <b>backwards symbolic execution</b> to refute spurious dataflow on-demand at critical points during the forwards analysis. I've also worked on a range of other program analysis topics in both academia and industry including refinement type systems, type inference, and bounded symbolic execution.
+      </div>
+    </div>
+  </div>
+
+  <div class="row" onclick="toggle('news')">
+    <span style="font:300 2em nunito;color:#49c484;cursor:pointer">Recent News</span> <span id="news_toggler" style="font:300 1em nunito;color:#eee;cursor:pointer">[click to expand]</span>
+    <hr>
+  </div>
+
+  <div class="row" id="news" style="display:none">
+    <div class="row m0"></div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Paper @ PLDI '21</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Virtual, June 2021</i></h5>
+        </div>
       </div>
 
-      <div class="row mt0 mb0 ph1">
-	<div class="row" style="margin-bottom: -2em">
-	  <div class="col">
-	    <h4 style="color:#49c484">Safe Stream-Based Programming with Refinement Types</h4>
-	  </div>
-	  <div class="col" style="text-align:right">
-	    <h5><i>ASE '18</i></h5>
-	  </div>
-	</div>
-	<div class="row ml1 ph2">
-	  <div class="8 col newsitem">
-	    <b>Benno Stein</b>, Lazaro Clapp, Manu Sridharan, Bor-Yuh Evan Chang.
-	    <br>
-	    <i>33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE '18</b>)</i>
-	  </div>
-      	  <div class="m1 col"><a class="p1 btn b-green" href="ase18.pdf">pdf</a></div>
-	  <div class="m1 col"><a class="p1 btn b-green" href="ase18_slides.pdf">slides</a></div>
-	</div>
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Our paper <i>Demanded Abstract Interpretation</i> will be presented at the ACM/SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a class="p1 btn" href="pldi21.pdf">paper</a> <a class="p1 btn" href="pldi21-slides.pdf">slides</a>
+        </div>
       </div>
-      
     </div>
-  </body>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Thesis Proposal</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Boulder, Colorado, February 2021</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          I proposed a dissertation centered around my recent work on <i>Interactive Abstract Interpretation</i>, in which I lift <i>arbitrary</i> abstract interpreters to incremental and demand-driven equivalents that are provably sound, terminating, and from-scratch consistent with the underlying interpreter.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="prop.pdf" class="p1 btn">proposal</a> <a href="prop.key" class="p1 btn">slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Paper @ OOPSLA '19</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Athens, Greece, October 2019</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          We presented our paper <i>Static Analysis with Demand-Driven Value Refinement</i> at the ACM/SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="oopsla19.pdf" class="p1 btn">paper</a> <a href="oopsla19-poster.pdf" class="p1 btn">poster</a> <a href="oopsla19-slides.pdf" class="p1 btn">slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Facebook Internship</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>London, UK, Fall 2019</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          I worked with Josh Berdine and the Infer team on <i>Sledge</i>: a separation logic-based symbolic executor for LLVM.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="https://github.com/facebook/infer/tree/master/sledge" class="p1 btn" style="white-space:nowrap">open-source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Paper @ ASE '18</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Montpellier, France, September 2018</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          I presented our paper <i>Safe Stream-Based Programming with Refinement Types</i> at the 33rd IEEE/ACM International Conference on Automated Software Engineering.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="ase18.pdf" class="p1 btn">paper</a> <a href="ase18_slides.pdf" class="p1 btn">slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Google Internship</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Sunnyvale, CA, Summer 2018</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          I worked with Kevin Bierhoff and the Java language platform team to implement some improvements (type inference, access-path tracking, type annotation and bound support) for the <a href="https://github.com/google/error-prone">Error Prone</a> Java nullness analysis.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="https://github.com/google/error-prone" class="p1 btn" style="white-space:nowrap">open-source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Student Volunteer @ POPL '18</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Los Angeles, CA, January 2018</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Attended and assisted with logistics at POPL and several co-located workshops.
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Uber Internship</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Palo Alto, CA, Summer 2017</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          I built a type analysis to statically detect multithreading bugs in <a href="http://reactivex.io/">functional-reactive</a> Android applications, working under Manu Sridharan in the static analysis group.
+        </div>
+
+        <div class="col" style="text-align:right">
+          <a href="https://github.com/google/uber-research/RxThreadEffectChecker" class="p1 btn" style="white-space:nowrap">open-source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">Oregon Programming Languages Summer School</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Eugene, OR, June 2016</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Attended <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/">OPLSS 2016</a>. I saw a wide range of talks from invited lecturers and other students, gave a talk on my own research, and got to know a <a href="https://www.cs.uoregon.edu/research/summerschool/summer16/_images/OPLSS_2016.jpg">ton</a> of other PL researchers.
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="6 col">
+          <h4><b style="color:#49c484">PLDI Student Research Competition</b></h4>
+        </div>
+
+        <div class="4 col" style="text-align:right">
+          <h5><i>Santa Barbara, CA, June 2016</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Attended PLDI and won 2nd place in the SRC for my presentation on <i>Goal-Directed Backwards Static Analysis for JavaScript</i>.
+        </div>
+
+        <div class="2 col" style="text-align:right">
+          <a href="pldi_src_poster.pdf" class="p1 btn">poster</a> <a href="pldi_src_abstract.pdf" class="p1 btn">abstract</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">DARPA MUSE Demo Hackathon</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>Washington D.C., February 2016</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Assisted the <a href="http://plv.colorado.edu">CUPLV</a> <a href="http://plv.colorado.edu/projects/MUSE/index.html">MUSE</a> team with their hackathon by building a backwards, goal-directed Android analysis, looking for misuses of common Android encryption libraries.
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4><b style="color:#49c484">PLMW @ POPL</b></h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>St. Petersburg, FL, January 2016</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="col newsitem">
+          Attended POPL '16 and the co-located Programming Languages Mentoring Workshop, supported by a research community development grant from CU.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" onclick="toggle('pubs')">
+    <span style="font:300 2em nunito;color:#49c484;cursor:pointer">Publications</span> <span id="pubs_toggler" style="font:300 1em nunito;color:#eee;cursor:pointer">[click to expand]</span>
+    <hr>
+  </div>
+
+  <div class="row" id="pubs" style="display:none">
+    <div class="row"></div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4 style="color:#49c484">Demanded Abstract Interpretation</h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>PLDI '21</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="8 col newsitem">
+          <b>Benno Stein</b>, Bor-Yuh Evan Chang, Manu Sridharan.<br>
+          <i>ACM/SIGPLAN Conference on Programming Language Design and Implementation (<b>PLDI '21</b>)</i>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="pldi21.pdf">pdf</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="pldi21-slides.pdf">slides</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom:-2em">
+        <div class="col">
+          <h4 style="color:#49c484">Static Analysis with Demand-Driven Value Refinement</h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>OOPSLA '19</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="8 col newsitem">
+          <b>Benno Stein</b>, Benjamin Barslev Nielsen, Bor-Yuh Evan Chang, Anders M&#195;&#184;ller.<br>
+          <i>ACM/SIGPLAN Conference on Object-Oriented Programs, Systems, Languages, and Applications (<b>OOPSLA '19</b>)</i><br>
+          (Slides courtesy of Benjamin Barslev Nielsen)
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="oopsla19.pdf">pdf</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="oopsla19-slides.pdf">slides</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="oopsla19-poster.pdf">poster</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt0 mb0 ph1">
+      <div class="row" style="margin-bottom: -2em">
+        <div class="col">
+          <h4 style="color:#49c484">Safe Stream-Based Programming with Refinement Types</h4>
+        </div>
+
+        <div class="col" style="text-align:right">
+          <h5><i>ASE '18</i></h5>
+        </div>
+      </div>
+
+      <div class="row ml1 ph2">
+        <div class="8 col newsitem">
+          <b>Benno Stein</b>, Lazaro Clapp, Manu Sridharan, Bor-Yuh Evan Chang.<br>
+          <i>33rd IEEE/ACM International Conference on Automated Software Engineering (<b>ASE '18</b>)</i>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="ase18.pdf">pdf</a>
+        </div>
+
+        <div class="m1 col">
+          <a class="p1 btn b-green" href="ase18_slides.pdf">slides</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
-
