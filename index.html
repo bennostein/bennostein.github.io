@@ -10,13 +10,14 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet" type="text/css">
   <script type="text/javascript">
 function toggle(elt_id, force_visible) {
-        var elt = document.getElementById(elt_id); var elt_toggler = document.getElementById(elt_id + '_toggler');
-        if (force_visible || elt.style.display === 'none') {
-            elt.style.display = 'block'; elt_toggler.textContent = "[click to collapse]";
-        } else {
-            elt.style.display = 'none'; elt_toggler.textContent = "[click to expand]";
-        }
+    var elt = document.getElementById(elt_id),
+	elt_toggler = document.getElementById(elt_id + '_toggler');
+    if (force_visible || elt.style.display === 'none') {
+        elt.style.display = 'block'; elt_toggler.textContent = "[click to collapse]";
+    } else {
+        elt.style.display = 'none'; elt_toggler.textContent = "[click to expand]";
     }
+}
   </script>
 </head>
 
@@ -30,13 +31,13 @@ function toggle(elt_id, force_visible) {
 
       <h5>University of Colorado Boulder</h5>
 
-      <p><a href="mailto:Benno%20Stein">firstname dot lastname at colorado dot edu</a><br>
+      <p><a href="mailto:Benno%20Stein">first dot last at colorado dot edu</a><br>
       <a href="https://map.concept3d.com/?id=336#!w/40.00714,-105.2637,1;40.00668,-105.26376,1;1">ECCS 121</a></p>
       <hr>
 
       <div class="pv1 row">
         <div class="m1 col">
-          <a class="p1 btn b-green" href="CV.pdf">CV</a>
+          <a class="p1 btn b-green" href="CV.pdf">cv</a>
         </div>
 
         <div class="m1 col">
@@ -44,11 +45,11 @@ function toggle(elt_id, force_visible) {
         </div>
 
         <div class="m1 col">
-          <a class="p1 btn b-green" href="https://github.com/bennostein">Github</a>
+          <a class="p1 btn b-green" href="https://github.com/bennostein">github</a>
         </div>
 
         <div class="m1 col">
-          <a class="p1 btn b-green" href="https://www.linkedin.com/in/bennostein">LinkedIn</a>
+          <a class="p1 btn b-green" href="https://twitter.com/benno_stein">twitter</a>
         </div>
 
       </div>
@@ -65,7 +66,9 @@ function toggle(elt_id, force_visible) {
       <div class="row" id="research">
         <h3 class="mb0">Research Interests</h3>
         <hr class="mt0">
-        I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development. Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>, using graph-based techniques to efficiently and soundly deliver analysis results when and where they're needed. Prior to that, I worked on improving the precision and efficiency of JavaScript analysis, combining a standard forwards abstract interpreter with a goal-directed <b>backwards symbolic execution</b> to refute spurious dataflow on-demand at critical points during the forwards analysis. I've also worked on a range of other program analysis topics in both academia and industry including refinement type systems, type inference, and bounded symbolic execution.
+        <p>I am interested in building <b>static analysis</b> tools and formalisms that are able to handle the complexities of modern software development. Currently, I am working on incremental and demand-driven <b>abstract interpretation</b>.</p>
+
+	<p>I've worked in the past on a range of program analysis topics in both academia and industry, including static analysis of dynamic languages, refinement type systems, type inference, and bounded symbolic execution.</p>
       </div>
     </div>
   </div>
