@@ -1,0 +1,250 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.2 (3/28/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute 
+% (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Modified by:
+% Daniel L Marks <xleafr@gmail.com> 3/28/2015
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can have multiple style options the legal options ones are:
+%
+%   centered:	the name and address are centered at the top of the page 
+%				(default)
+%
+%   line:		the name is the left with a horizontal line then the address to
+%				the right
+%
+%   overlapped:	the section titles overlap the body text (default)
+%
+%   margin:		the section titles are to the left of the body text
+%		
+%   11pt:		use 11 point fonts instead of 10 point fonts
+%
+%   12pt:		use 12 point fonts instead of 10 point fonts
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[margin]{res}  
+
+% Default font is the helvetica postscript font
+\usepackage{helvet}
+
+\usepackage{enumitem}\setitemize{leftmargin=*}
+
+% Increase text height
+\textheight=750pt
+
+\addtolength{\topmargin}{-.5in}
+\begin{document}
+
+%-------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%-------------------------------------------------------------------------------
+\name{Benno Stein}
+
+% Note that addresses can be used for other contact information:
+% -phone numbers
+% -email addresses
+% -linked-in profile
+
+\address{\iffalse+1 (914) 255 - 8010\\\fi+44 7787 003683\\\texttt{benno.stein@gmail.com}}
+\address{London, UK\\\texttt{bennostein.org}}
+
+% Uncomment to add a third address
+%\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
+%-------------------------------------------------------------------------------
+
+\begin{resume}
+
+%-------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%-------------------------------------------------------------------------------
+\section{EDUCATION}
+\textbf{University of Colorado}, Boulder, CO\\
+{\sl Doctor of Philosophy}, Computer Science\hfill 2017 -- 2021\\
+Advisor: Bor-Yuh Evan Chang
+
+\textbf{University of Colorado}, Boulder, CO\\
+{\sl Master of Science}, Computer Science\hfill 2015 -- 2017
+
+\textbf{Williams College}, Williamstown, MA\\
+{\sl Bachelor of Arts}, Computer Science and Mathematics\hfill 2011 -- 2015
+
+%\textbf{Rye High School}, Rye, NY\\
+%National Merit Scholar, National AP Scholar, National Honor Society\hfill 2007-2011
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%-------------------------------------------------------------------------------
+% Modify the format of each position
+\begin{format}
+\title{l}\employer{r}\\
+\dates{l}\location{r}\\
+\body\\
+\end{format}
+%-------------------------------------------------------------------------------
+
+\section{EXPERIENCE (ACADEMIA)}
+\employer{University of Colorado, Boulder}
+\location{Boulder, CO}
+\dates{2015 -- 2021}
+\title{\textbf{Research Assistant}}
+\begin{position}
+Performed research under Prof. Bor-Yuh Evan Chang in the Programming Languages and Verification Group, studying program analysis and verification with a focus on incremental and demand-driven abstract interpretation.
+\end{position}
+
+\employer{University of Colorado, Boulder}
+\location{Boulder, CO}
+\dates{Fall 2017, Summer 2019, Spring 2020}
+\title{\textbf{Course Assistant}/\textbf{Teaching Assistant}}
+\begin{position}
+  Ran office hours, helped design problem sets and exams, and offered one-on-one tutoring sessions in both graduate and undergraduate level Compiler Design and Programming Languages courses.
+  As a course assistant, additionally designed and taught approximately 10 lectures per semester, in both remote and in-person formats.
+  \end{position}
+
+\employer{University of Michigan}
+\location{Ann Arbor, MI}
+\dates{Summer 2014}
+\title{\textbf{Research Assistant}}
+\begin{position}
+Performed research under Prof. Michael Wellman in the Strategic Reasoning Group, studying machine learning-based high-frequency trading algorithms using empirical game-theoretic models.\end{position}
+%\employer{Williams College CS Department}
+%\location{Williamstown, MA}
+%\dates{2012-2014}
+%\title{\textbf{Teaching Assistant/Tutor}}
+%\begin{position}
+%Ran TA sessions and one-on-one tutoring sessions and assisted professors in administering lectures, labs, and exams for a broad range of Computer Science courses.
+%\end{position}
+\section{EXPERIENCE (INDUSTRY)}
+\employer{Meta}
+\location{London, UK}
+\dates{Feb. 2022 -- present}
+\title{\textbf{Software Engineer}}
+\begin{position}
+  Working in the Continuous Verification Lab on incremental algorithms and infrastructure for the Infer static analyzer.
+  Previously worked on goal-directed symbolic execution of LLVM bitcode.
+\end{position}
+
+\employer{Facebook}
+\location{London, UK}
+\dates{Fall 2019}
+\title{\textbf{Software Engineer Intern}}
+\begin{position}
+Implemented new abstract domains and formalized correctness guarantees of the SLEdge symbolic executor. \end{position}
+\employer{Google}
+\location{Sunnyvale, CA}
+\dates{Summer 2018}
+\title{\textbf{Software Engineer Intern}}
+\begin{position}
+Worked on the open-source Error Prone static analyzer, improving the Java nullability analysis and implementing a novel nullness type inference algorithm.\end{position}
+\employer{Uber}
+\location{Palo Alto, CA}
+\dates{Summer 2017}
+\title{\textbf{Software Engineer Intern}}
+\begin{position}
+Designed and built a refinement type-based static analysis to detect threading defects in functional-reactive Android applications.\end{position}
+%\employer{Fiksu, Inc.}
+%\location{Boston, MA}
+%\dates{Summer 2013}
+%\title{\textbf{Software Engineer Intern}}
+%\begin{position}
+%Built internal data management and reporting software in Ruby on Rails and PostgreSQL.  Worked on a large codebase with many contributors and massive production databases.\end{position}
+
+
+%\employer{Williams Outing Club}
+%\location{Williamstown, MA}
+%\dates{2011-2015}
+%\title{\textbf{Telemark Instructor and Coordinator}}
+%\begin{position}
+%Coordinated telemark ski program: hired, trained, and scheduled other instructors and maintained equipment.  Taught Physical Education telemark skiing classes and led overnight and day-long backcountry skiing trips
+%\end{position}
+%
+%\employer{Self-Employed}
+%\location{Rye, NY}
+%\dates{2010-2011}
+%\title{\textbf{Academic and SAT Tutor}}
+%\begin{position}
+%Tutored middle and high school students in various Math, Science, and Latin courses as a freelancer.  Worked for Peak Performance SAT Prep as a Math and Writing tutor.
+%\end{position}
+
+\section{CONFERENCE PUBLICATIONS}
+{\bf Interactive Abstract Interpretation with Demanded Summarization}\\
+{\bf Benno Stein}, David Flores, Bor-Yuh Evan Chang, and Manu Sridharan.  {\em Under Submission.}\\\vspace{-1em}
+
+{\bf Demanded Abstract Interpretation}\\
+{\bf Benno Stein}, Bor-Yuh Evan Chang, and Manu Sridharan.  2021. In {\em Proceedings of the ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI).}\\\vspace{-1em}
+
+{\bf Static Analysis with Demand-Driven Value Refinement}\\
+{\bf Benno Stein}, Benjamin Barslev Nielsen, Bor-Yuh Evan Chang, and Anders M\o{}ller. 2019. In {\em Proceedings of  the ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA).}\\\vspace{-1em}
+
+{\bf Safe Stream-based Programming with Refinement Types}\\
+{\bf Benno Stein}, Lazaro Clapp, Manu Sridharan, and Bor-Yuh Evan Chang. 2018. In {\em Proceedings of the IEEE/ACM International Conference on Automated Software Engineering (ASE).}
+
+\section{AWARDS AND HONORS}
+
+{\bf Ralph J. Slutz Student Excellence Award, CUB CS Dept.}\hfill 2021 -- 2022\\
+{\bf Outstanding Research Award, CUB CS Dept.}\hfill 2020 -- 2021\\
+{\bf Distinguished Student Speaker Award, CUB CS Dept.}\hfill 2018\\
+{\bf Outstanding Service Award, CUB CS Dept.}\hfill 2017 -- 2018\\
+{\bf Dean's Graduate Assistantship, CU Boulder} \hfill 2015 -- 2016\\
+{\bf ACM Student Research Competition, PLDI, 2nd Place}\hfill 2016\\
+
+\section{SPEAKING}
+{\bf ConVeY Seminar, TU Munich}\hfill July 2022\\
+{\bf Dissertation Defense, CU Boulder}\hfill March 2022\\
+{\bf Thesis Proposal, CU Boulder}\hfill Spring 2021\\
+{\bf Paper and Poster Presentation, PLDI '21 (virtual)}\hfill Summer 2021\\
+{\bf Paper and Poster Presentation, OOPSLA '19}\hfill Fall 2019\\
+{\bf Paper Presentation, ASE '18 }\hfill Summer 2018\\
+{\bf Graduate Research Forum, CU Boulder}\hfill Fall 2017\\
+{\bf PL \& Verification Seminar, CU Boulder }\hfill Fall 2017\\
+{\bf Student Research Presentation, Oregon PL Summer School}\hfill Spring 2016\\
+{\bf ACM Student Research Competition, PLDI}\hfill Spring 2016\\
+{\bf Math Department Colloquium, Williams College} \hfill Fall 2014\\
+%Gave 30 minute presentation on coding theory and abstract algebra underpinnings of my computer science research to an audience of Math faculty and majors.\\
+{\bf REU Research Forum, University of Michigan}\hfill Summer 2014\\
+%Presented poster and slides on my research in ``Empirical Analysis of Adaptive Market Making'' to faculty and students.\\
+{\bf Hudson River Undergraduate Math Conference}\hfill Spring 2013
+%Gave a talk in which I proved and discussed the history of G\"odel's incompleteness theorem.
+\section{SERVICE}
+{\bf Chair, PhD Student Faculty Search Committee}\hfill{2016 -- 2017}\\
+Organized and participated in student interviews for visiting faculty candidates, compiled PhD student feedback, and served as liaison to faculty search committee.\\\\
+{\bf Member, Computer Science Student Advisory Committee}\hfill{2013 -- 2014}\\
+Met with visiting speakers and job candidates to the Williams computer science department and provided feedback on job candidates.  Organized department meetings and social events.  Elected by peers as one of two student representatives.\\\\
+{\bf Peer Review}\\
+Reviewed papers and participated in committee discussions for the following venues:
+\begin{itemize}[topsep=0.5em]
+\item[-] {\bf OOPSLA 2023}\hfill Artifact Evaluation Committee
+\item[-] {\bf OOPSLA 2023}\hfill External Review Committee
+\item[-] {\bf SAS 2022}\hfill Program Committee
+\item[-] {\bf OOPSLA 2022}\hfill Artifact Evaluation Committee
+\item[-] {\bf OOPSLA 2022}\hfill External Review Committee
+\item[-] {\bf CAV 2021}\hfill Sub-reviewer
+\item[-] {\bf SAS 2019}\hfill Artifact Evaluation Committee
+\item[-] {\bf POPL 2019}\hfill Sub-reviewer
+\item[-] {\bf APLAS 2017}\hfill Sub-reviewer
+\item[-] {\bf CAV 2017} \hfill Sub-reviewer
+\item[-] {\bf SAS 2016} \hfill Sub-reviewer
+\end{itemize}
+\end{resume}
+\end{document}
