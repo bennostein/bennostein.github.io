@@ -43,17 +43,17 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[margin]{res}  
+\documentclass[margin,10pt]{res}
 
 % Default font is the helvetica postscript font
 \usepackage{helvet}
 
 \usepackage{enumitem}\setitemize{leftmargin=*}
-
+\usepackage{setspace}\setstretch{1.15}
 % Increase text height
-\textheight=750pt
+\textheight=720pt
 
-\addtolength{\topmargin}{-.5in}
+%\addtolength{\topmargin}{-.5in}
 \begin{document}
 
 %-------------------------------------------------------------------------------
@@ -67,7 +67,7 @@
 % -linked-in profile
 
 \address{\iffalse+1 (914) 255 - 8010\\\fi+44 7787 003683\\\texttt{benno.stein@gmail.com}}
-\address{London, UK\\\texttt{bennostein.org}}
+\address{\hfill London, UK\\\texttt{bennostein.org}}
 
 % Uncomment to add a third address
 %\address{Address 3 line 1\\Address 3 line 2\\Address 3 line 3}
@@ -104,37 +104,6 @@ Advisor: Bor-Yuh Evan Chang
 \end{format}
 %-------------------------------------------------------------------------------
 
-\section{EXPERIENCE (ACADEMIA)}
-\employer{University of Colorado, Boulder}
-\location{Boulder, CO}
-\dates{2015 - 2021}
-\title{\textbf{Research Assistant}}
-\begin{position}
-Performed research under Prof. Bor-Yuh Evan Chang in the Programming Languages and Verification Group, studying program analysis and verification with a focus on incremental and demand-driven abstract interpretation.
-\end{position}
-
-\employer{University of Colorado, Boulder}
-\location{Boulder, CO}
-\dates{Fall 2017, Summer 2019, Spring 2020}
-\title{\textbf{Course Assistant}/\textbf{Teaching Assistant}}
-\begin{position}
-  Ran office hours, helped design problem sets and exams, and offered one-on-one tutoring sessions in both graduate and undergraduate level Compiler Design and Programming Languages courses.
-  As a course assistant, additionally designed and taught approximately 10 lectures per semester, in both remote and in-person formats.
-  \end{position}
-
-\employer{University of Michigan}
-\location{Ann Arbor, MI}
-\dates{Summer 2014}
-\title{\textbf{Research Assistant}}
-\begin{position}
-Performed research under Prof. Michael Wellman in the Strategic Reasoning Group, studying machine learning-based high-frequency trading algorithms using empirical game-theoretic models.\end{position}
-%\employer{Williams College CS Department}
-%\location{Williamstown, MA}
-%\dates{2012-2014}
-%\title{\textbf{Teaching Assistant/Tutor}}
-%\begin{position}
-%Ran TA sessions and one-on-one tutoring sessions and assisted professors in administering lectures, labs, and exams for a broad range of Computer Science courses.
-%\end{position}
 \section{EXPERIENCE (INDUSTRY)}
 \employer{Meta}
 \location{London, UK}
@@ -187,6 +156,38 @@ Designed and built a refinement type-based static analysis to detect threading d
 %Tutored middle and high school students in various Math, Science, and Latin courses as a freelancer.  Worked for Peak Performance SAT Prep as a Math and Writing tutor.
 %\end{position}
 
+\section{EXPERIENCE (ACADEMIA)}
+\employer{University of Colorado, Boulder}
+\location{Boulder, CO}
+\dates{2015 - 2021}
+\title{\textbf{Research Assistant}}
+\begin{position}
+Performed research under Prof. Bor-Yuh Evan Chang in the Programming Languages and Verification Group, studying program analysis and verification with a focus on incremental and demand-driven abstract interpretation.
+\end{position}
+
+\employer{University of Colorado, Boulder}
+\location{Boulder, CO}
+\dates{Fall 2017, Summer 2019, Spring 2020}
+\title{\textbf{Course Assistant}/\textbf{Teaching Assistant}}
+\begin{position}
+  Ran office hours, helped design problem sets and exams, and offered one-on-one tutoring sessions in both graduate and undergraduate level Compiler Design and Programming Languages courses.
+  As a course assistant, additionally designed and taught approximately 10 lectures per semester, in both remote and in-person formats.
+  \end{position}
+
+\employer{University of Michigan}
+\location{Ann Arbor, MI}
+\dates{Summer 2014}
+\title{\textbf{Research Assistant}}
+\begin{position}
+Performed research under Prof. Michael Wellman in the Strategic Reasoning Group, studying machine learning-based high-frequency trading algorithms using empirical game-theoretic models.\end{position}
+%\employer{Williams College CS Department}
+%\location{Williamstown, MA}
+%\dates{2012-2014}
+%\title{\textbf{Teaching Assistant/Tutor}}
+%\begin{position}
+%Ran TA sessions and one-on-one tutoring sessions and assisted professors in administering lectures, labs, and exams for a broad range of Computer Science courses.
+%\end{position}
+
 \section{CONFERENCE PUBLICATIONS}
 {\bf Interactive Abstract Interpretation with Demanded Summarization}\\
 {\bf Benno Stein}, David Flores, Bor-Yuh Evan Chang, and Manu Sridharan.  {\em Under Submission.}\\\vspace{-1em}
@@ -201,15 +202,15 @@ Designed and built a refinement type-based static analysis to detect threading d
 {\bf Benno Stein}, Lazaro Clapp, Manu Sridharan, and Bor-Yuh Evan Chang. 2018. In {\em Proceedings of the IEEE/ACM International Conference on Automated Software Engineering (ASE).}
 
 \section{AWARDS AND HONORS}
-
+\begin{spacing}{1.2}
 {\bf Ralph J. Slutz Student Excellence Award, CUB CS Dept.}\hfill 2021 -- 2022\\
 {\bf Outstanding Research Award, CUB CS Dept.}\hfill 2020 -- 2021\\
 {\bf Distinguished Student Speaker Award, CUB CS Dept.}\hfill 2018\\
 {\bf Outstanding Service Award, CUB CS Dept.}\hfill 2017 -- 2018\\
 {\bf Dean's Graduate Assistantship, CU Boulder} \hfill 2015 -- 2016\\
-{\bf ACM Student Research Competition, PLDI, 2nd Place}\hfill 2016\\
-
+{\bf ACM Student Research Competition, PLDI, 2nd Place}\hfill 2016
 \section{SPEAKING}
+{\bf Infer Workshop, PLDI '23}\hfill June 2023\\
 {\bf ConVeY Seminar, TU Munich}\hfill July 2022\\
 {\bf Dissertation Defense, CU Boulder}\hfill March 2022\\
 {\bf Thesis Proposal, CU Boulder}\hfill Spring 2021\\
@@ -224,7 +225,7 @@ Designed and built a refinement type-based static analysis to detect threading d
 %Gave 30 minute presentation on coding theory and abstract algebra underpinnings of my computer science research to an audience of Math faculty and majors.\\
 {\bf REU Research Forum, University of Michigan}\hfill Summer 2014\\
 %Presented poster and slides on my research in ``Empirical Analysis of Adaptive Market Making'' to faculty and students.\\
-{\bf Hudson River Undergraduate Math Conference}\hfill Spring 2013
+{\bf Hudson River Undergraduate Math Conference}\hfill Spring 2013\end{spacing}
 %Gave a talk in which I proved and discussed the history of G\"odel's incompleteness theorem.
 \section{SERVICE}
 {\bf Chair, PhD Student Faculty Search Committee}\hfill{2016 -- 2017}\\
@@ -233,7 +234,8 @@ Organized and participated in student interviews for visiting faculty candidates
 Met with visiting speakers and job candidates to the Williams computer science department and provided feedback on job candidates.  Organized department meetings and social events.  Elected by peers as one of two student representatives.\\\\
 {\bf Peer Review}\\
 Reviewed papers and participated in committee discussions for the following venues:
-\begin{itemize}[topsep=0.5em]
+\begin{itemize}[topsep=0.5em,leftmargin=2em]
+\item[-] {\bf Infer Workshop 2023}\hfill Program Committee
 \item[-] {\bf OOPSLA 2023}\hfill Artifact Evaluation Committee
 \item[-] {\bf OOPSLA 2023}\hfill External Review Committee
 \item[-] {\bf SAS 2022}\hfill Program Committee
